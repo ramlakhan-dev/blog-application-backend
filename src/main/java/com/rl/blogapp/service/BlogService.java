@@ -69,4 +69,11 @@ public class BlogService {
                 .map(blogMapper::toDto)
                 .toList();
     }
+
+    public List<BlogResponse> getAllBlogs() {
+        return blogRepository.findAll()
+                .stream()
+                .map(blogMapper::toDto)
+                .toList();
+    }
 }

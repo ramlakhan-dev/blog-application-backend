@@ -51,4 +51,9 @@ public class BlogController {
         String email = authentication.getName();
         return new ResponseEntity<>(blogService.getBlogs(email), HttpStatus.OK);
     }
+
+    @GetMapping
+    public ResponseEntity<?> getAllBlogs() {
+        return new ResponseEntity<>(blogService.getAllBlogs(), HttpStatus.OK);
+    }
 }
